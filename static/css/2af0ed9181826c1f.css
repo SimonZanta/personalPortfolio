@@ -1,0 +1,1 @@
+#animateHover,#basic{stroke:var(--tertiary-color);stroke-dasharray:400;stroke-dashoffset:0}#animateHover{animation:hoverAnim 2s ease-in-out}@keyframes hoverAnim{0%{stroke-dashoffset:400}to{stroke-dashoffset:0}}

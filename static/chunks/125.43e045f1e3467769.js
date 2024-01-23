@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[125],{7125:function(e,n,t){t.r(n),t.d(n,{default:function(){return r}});var c=t(7437);function r(e){let{children:n,fullFlexPage:t=!0,reverseFlex:r=!1,colLayout:s=!1}=e;return(0,c.jsx)("section",{className:"min-h-screen mx-5 lg:mx-32 relative",children:n})}}}]);

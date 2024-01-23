@@ -1,0 +1,1 @@
+"use strict";exports.id=565,exports.ids=[565],exports.modules={2565:(e,s,r)=>{r.r(s),r.d(s,{default:()=>i});var t=r(3854);function i({children:e,fullFlexPage:s=!0,reverseFlex:r=!1,colLayout:i=!1}){return t.jsx("section",{className:"min-h-screen mx-5 lg:mx-32 relative",children:e})}}};
