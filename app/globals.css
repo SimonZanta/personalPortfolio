@@ -1,27 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Roboto Mono');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer utilities {
+  .underline-text-base{
+    /* after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-2 after:bg-secondary  */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 66.66%;
+    height: 0.08em;
+    background-color: var(--secondary-color);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+:root {
+  --main-text-color: hsl(0, 0%, 99%);
+  --main-background: #141414;
+  --secondary-color: #8616B7;
+  --tertiary-color: #F3CBF3;
+  --link-color: #EE9CF3;
+}
+
+html{
+  color: var(--main-text-color);
+  background-color: var(--main-background);
+  font-family: 'Roboto Mono', sans-serif;
 }
