@@ -66,7 +66,7 @@ export default async function Home() {
           </div>
         </Section>
         <Section>
-          <div className='flex min-h-1/2 flex-col xl:flex-row'>
+          <div className='flex min-h-1/2 flex-col 2xl:flex-row'>
             <span className='xl:mt-auto xl:mb-auto md:mt-32 md:mb-32 lg:mb-40 lg:mt-28 mt-40'>
               <MainTitle text="contacts"/>
             </span>
