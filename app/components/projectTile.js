@@ -15,7 +15,7 @@ export default function ProjectTile({projectTitle, projectTechnologies}){
         setIsHovering(false)
     }
     return(
-        <div className="bg-secondary overflow-hidden w-full sm:w-2/3 xl:h-72 h-44 rounded-xl relative" 
+        <div className="bg-secondary overflow-hidden w-full sm:w-2/3 xl:h-56 h-40 rounded-xl relative" 
         onMouseEnter={setHoverTrue}
         onMouseLeave={setHoverFalse}>
             <Image src="/personalPortfolio/projectBackground/Rectangle.png" alt={projectTitle} width={0} height={0} sizes="100vw" className={"md:w-[500px] h-auto w-64 absolute left-16 top-16 rounded-xl shadow-[0px_0px_4.4px_7.7px_rgba(20,20,20,0.25)] " + (isHovering ? "scale-110 duration-500" : "scale-100 duration-500")}/>
