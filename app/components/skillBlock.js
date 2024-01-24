@@ -23,7 +23,7 @@ export function SkillItems(){
             <section className='py-8'>
             <div className='flex flex-row'>
                 <Image
-                src={"./icons/" + key.toLowerCase() + ".svg"}
+                src={"/personalPortfolio/icons/" + key.toLowerCase() + ".svg"}
                 width={imageSize}
                 height={imageSize}
                 alt={"gear"}
