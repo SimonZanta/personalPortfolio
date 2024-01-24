@@ -29,7 +29,7 @@ module.exports = {
       sm: '20px',
       base: '30px',
       lg: '50px',
-      xl: '130px',
+      xl: '90px',
     }
   },
   plugins: [require("tailwind-gradient-mask-image")]
