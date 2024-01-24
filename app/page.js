@@ -56,7 +56,7 @@ export default async function Home() {
         </Section>
         <Section>
           <div className='flex min-h-1/2 flex-col-reverse xl:flex-row'>
-            <div className='w-full xl:w-1/2 xl:h-screen flex flex-col md:flex-row xl:flex-col md:gap-36 gap-16 justify-center md:pt-0 pt-20 mb-32 xl:mb-0'>
+            <div className='w-full xl:w-1/2 xl:h-screen flex flex-col md:flex-row xl:flex-col md:gap-24 gap-16 justify-center md:pt-0 pt-20 mb-32 xl:mb-0'>
                 <ProjectTile projectTitle="lul" projectTechnologies="xddddd"/>
                 <ProjectTile projectTitle="lul" projectTechnologies="xddddd"/>
             </div>
@@ -77,28 +77,28 @@ export default async function Home() {
                 height={imageSize}
                 alt={"gear"}
                 sizes="100vw"
-                className={"w-20 h-20 md:w-40 md:h-40 px-4"}/>
+                className={"w-20 h-20 md:w-32 md:h-32 px-4"}/>
                 <Image
                 src={"/personalPortfolio/icons/githubIcon.svg"}
                 width={imageSize}
                 height={imageSize}
                 alt={"gear"}
                 sizes="100vw"
-                className={"w-20 h-20 md:w-40 md:h-40 px-4"}/>
+                className={"w-20 h-20 md:w-32 md:h-32 px-4"}/>
                 <Image
                 src={"/personalPortfolio/icons/EmailIcon.svg"}
                 width={imageSize}
                 height={imageSize}
                 alt={"gear"}
                 sizes="100vw"
-                className={"w-20 h-20 md:w-40 md:h-40 px-4"}/>
+                className={"w-20 h-20 md:w-32 md:h-32 px-4"}/>
             </div>            
           </div>
         </Section>
-        <section className='h-[25vh]'>
+        <section className='h-[10vh]'>
             <div className='flex justify-center gap-12 items-center h-full'>
-              <TextFont text={"@simon.zanta"}/>
-              <TextFont text={"2023"}/>
+              <TextFont text={"@simon.zanta"} isSmaller={true}/>
+              <TextFont text={"2023"} isSmaller={true}/>
             </div>
         </section>
       </main>
