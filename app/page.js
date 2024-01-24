@@ -6,6 +6,7 @@ import MainTitle from './components/font/mainTitle';
 import TextFont from './components/font/smallestFont'
 import SkillBlock from './components/skillBlock'
 import ProjectTile from './components/projectTile'
+import Image from 'next/image';
 
 
 const quoteFlood = [
@@ -15,6 +16,7 @@ const quoteFlood = [
 ]
 
 export default async function Home() {
+  let imageSize = 0;
   return (
       <main>
         <MainHeader/>
@@ -54,18 +56,51 @@ export default async function Home() {
         </Section>
         <Section>
           <div className='flex min-h-1/2 flex-col-reverse xl:flex-row'>
-            <div className='w-full xl:w-1/2 xl:h-screen flex flex-col md:flex-row xl:flex-col md:gap-36 gap-16 justify-center md:mt-0 mt-32 mb-32 xl:mb-0'>
+            <div className='w-full xl:w-1/2 xl:h-screen flex flex-col md:flex-row xl:flex-col md:gap-36 gap-16 justify-center md:pt-0 pt-20 mb-32 xl:mb-0'>
                 <ProjectTile projectTitle="lul" projectTechnologies="xddddd"/>
                 <ProjectTile projectTitle="lul" projectTechnologies="xddddd"/>
             </div>
             <span className='xl:mt-auto xl:mb-auto md:mt-32 md:mb-32 lg:mb-40 lg:mt-28 mt-40'>
               <MainTitle text="projects"/>
             </span>
-            </div>
+          </div>
         </Section>
         <Section>
-          
+          <div className='flex min-h-1/2 flex-col xl:flex-row'>
+            <span className='xl:mt-auto xl:mb-auto md:mt-32 md:mb-32 lg:mb-40 lg:mt-28 mt-40'>
+              <MainTitle text="contacts"/>
+            </span>
+            <div className='w-full xl:w-1/2 xl:h-screen flex flex-row md:gap-16 gap-6 justify-center lg:justify-end items-center md:pt-0 pt-20 mb-32 xl:mb-0'>
+             <Image
+                src={"/personalPortfolio/icons/linkedInLogo.svg"}
+                width={imageSize}
+                height={imageSize}
+                alt={"gear"}
+                sizes="100vw"
+                className={"w-20 h-20 md:w-40 md:h-40 px-4"}/>
+                <Image
+                src={"/personalPortfolio/icons/githubIcon.svg"}
+                width={imageSize}
+                height={imageSize}
+                alt={"gear"}
+                sizes="100vw"
+                className={"w-20 h-20 md:w-40 md:h-40 px-4"}/>
+                <Image
+                src={"/personalPortfolio/icons/EmailIcon.svg"}
+                width={imageSize}
+                height={imageSize}
+                alt={"gear"}
+                sizes="100vw"
+                className={"w-20 h-20 md:w-40 md:h-40 px-4"}/>
+            </div>            
+          </div>
         </Section>
+        <section className='h-[25vh]'>
+            <div className='flex justify-center gap-12 items-center h-full'>
+              <TextFont text={"@simon.zanta"}/>
+              <TextFont text={"2023"}/>
+            </div>
+        </section>
       </main>
   )
 }
