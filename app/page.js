@@ -44,7 +44,7 @@ export default async function Home() {
               </span>
               <span className='md:w-2/3 text-left md:pt-20 pt-10'>
                 <TextFont
-                text="An aspiring student, I'm transitioning from Frontend development in JavaScript to Java development for desktop and web applications."/>
+                text="An aspiring student, transitioning from Frontend development in JavaScript to Java development for desktop and web applications."/>
               </span>
             </div>
             <>

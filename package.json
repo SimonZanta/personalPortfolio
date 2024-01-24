@@ -1,16 +1,12 @@
 {
-  "homepage": "https://simonzanta.github.io/personalPortfolio",
   "name": "personal-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "next start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d .next -t true",
     "build": "next build",
     "dev": "next dev",
-    "lint": "next lint",
-    "static": "next build && next export && touch ./out/.nojekyll && echo 'www.mywebsite.com' > ./out/CNAME"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "14.0.3",
