@@ -66,11 +66,11 @@ export default async function Home() {
           </div>
         </Section>
         <Section>
-          <div className='flex min-h-1/2 flex-col 2xl:flex-row'>
+          <div className='flex flex-col 2xl:flex-row'>
             <span className='xl:mt-auto xl:mb-auto md:mt-32 md:mb-32 lg:mb-40 lg:mt-28 mt-40'>
               <MainTitle text="contacts"/>
             </span>
-            <div className='w-full xl:w-1/2 xl:h-screen flex flex-row md:gap-16 gap-6 justify-center lg:justify-end items-center md:pt-0 pt-20 mb-32 xl:mb-0'>
+            <div className='w-full xl:w-1/2 xl:h-[50vh] flex flex-row md:gap-16 gap-6 justify-center lg:justify-end items-center md:pt-0 pt-20 mb-32 xl:mb-0'>
              <Image
                 src={"/personalPortfolio/icons/linkedInLogo.svg"}
                 width={imageSize}
