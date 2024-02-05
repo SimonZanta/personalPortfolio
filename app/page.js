@@ -1,11 +1,11 @@
 import React from 'react'
-import ContentBox from './components/contentBox';
-import MainHeader from './components/mainHeader';
-import Section from './components/universal/section';
-import MainTitle from './components/font/mainTitle';
-import TextFont from './components/font/smallestFont'
+import ContentBox from './components/quickNavigation';
+import MainHeader from './components/welcomeBlock';
+import Section from './components/UI/section';
+import MainTitle from './components/UI/headerText';
+import TextFont from './components/UI/universalText'
 import SkillBlock from './components/skillBlock'
-import ProjectTile from './components/projectTile'
+import ProjectTile from './components/projectBlock'
 import Image from 'next/image';
 
 
@@ -20,7 +20,7 @@ export default async function Home() {
   return (
       <main>
         <MainHeader/>
-        <Section fullFlexPage={false}>
+        <Section smIsHidden={true}>
             <div className='absolute top-1/2 -translate-y-1/2 w-full'>
               {quoteFlood.map((item, index) => {
                 let shouldBeLeft = index % 2 != 0
