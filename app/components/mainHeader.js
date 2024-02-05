@@ -7,10 +7,10 @@ export default function MainHeader(){
     return (
         <section className='h-screen'>
           <div className='relative'>
-            <div className='absolute h-screen gradient-mask-b-0'></div>
-            <Image src="/personalPortfolio/background/obstract.png" width={0} height={0} sizes="100vw" className='h-screen w-auto absolute invisible gradient-mask-b-0 lg:visible'/>px
+            <Image src="/personalPortfolio/background/obstract.png" width={0} height={0} sizes="100vw" className='h-screen w-auto absolute invisible lg:visible'/>
+            <div className='absolute h-screen w-full bg-gradient-to-t from-mainBackground  from-10%'></div>
           </div>
-          <div className='absolute flex flex-col p-5 lg:pt-5 pt-10 lg:p-32 gap-14 top-1/4 -translate-y-1/4 md:top-0 md:-translate-y-0'>
+          <div className='absolute flex flex-col p-5 pt-10 lg:p-32 gap-14 top-1/4 -translate-y-1/4 md:text-end'>
             <MainTitle text={"šimon"} noUnderline={true}/>
             <MainTitle text={"tech"} noUnderline={true}/>
             <MainTitle text={"ventures"} noUnderline={true}/>
