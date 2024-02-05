@@ -1,6 +1,6 @@
 'use client';
 import {useState, Suspense, useEffect} from 'react';
-import TextFont from './font/smallestFont';
+import TextFont from './UI/universalText.js';
 import { lazy } from 'react';
 
 
@@ -33,7 +33,8 @@ export default function ContentBox({toLeft, textShort, textLong, imgName}){
 
         return(
 
-            <div className={(toLeft ? 'lg:ml-auto lg:mr-0 lg:hover:translate-x-20 bg-gradient-to-l' : 'lg:hover:-translate-x-20 bg-gradient-to-r') + " from-secondary lg:from-50% from-10% lg:w-2/3 p-2 rounded-3xl transition duration-200 h-32"}
+            <div className={(toLeft ? 'lg:ml-auto lg:mr-0 lg:hover:translate-x-20 bg-gradient-to-l' : 'lg:hover:-translate-x-20 bg-gradient-to-r') + 
+            " from-secondary lg:from-50% from-10% lg:w-2/3 p-2 rounded-3xl transition duration-200 h-32"}
                 onMouseEnter={setHoverTrue}
                 onMouseLeave={setHoverFalse}
                 >
@@ -41,6 +42,7 @@ export default function ContentBox({toLeft, textShort, textLong, imgName}){
                     <Suspense fallback={<div></div>}>
                         <IconLoad className={"w-16 h-16 px-4 " + (isHovering ? "invisible" : "visible")}/>
                     </Suspense>
+                    {/* //TODO remake this to use two textFont for textShort and textLong */}
                     <span className='hidden lg:block'><TextFont text={isHovering ? textShort : textLong} isSmaller={isHovering ? false : true} isUppercase={true} /></span>
                 </div>      
             </div>

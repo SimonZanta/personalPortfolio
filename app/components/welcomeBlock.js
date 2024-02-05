@@ -1,5 +1,5 @@
-import NavBar from './universal/navBar';
-import MainTitle from './font/mainTitle';
+import NavBar from './UI/navBar';
+import MainTitle from './UI/headerText';
 import Image from 'next/image'
 
 export default function MainHeader(){

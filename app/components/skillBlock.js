@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import TextFont from './font/smallestFont'
+import TextFont from './UI/universalText'
 
 const skillDict = {
     'Backend': ["Java", "Python"],

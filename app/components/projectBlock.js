@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import TextFont from "./font/smallestFont";
+import TextFont from "./UI/universalText";
 import Image from 'next/image'
 
 export default function ProjectTile({projectTitle, projectTechnologies}){
