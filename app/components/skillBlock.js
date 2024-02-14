@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import TextFont from './UI/universalText'
+import TextLink from './UI/Link/textLink'
+import IconLink from './UI/Link/iconLink'
 
 const skillDict = {
     'Backend': ["Java", "Python"],
@@ -22,19 +23,13 @@ export function SkillItems(){
         Object.entries(skillDict).map( ([key, value]) => (
             <section className='py-8'>
             <div className='flex flex-row'>
-                <Image
-                src={"/personalPortfolio/icons/" + key.toLowerCase() + ".svg"}
-                width={imageSize}
-                height={imageSize}
-                alt={"gear"}
-                sizes='100vw'
-                className={"w-14 pr-4"}/>
-                <TextFont text={key}/>
+                <IconLink icon={key.toLowerCase() + ".svg"} isSmall={true}/>
+                <TextLink text={key}/>
             </div>
 
             <ul className='pl-20 md:pl-24'>
                 {value.map((skillName, index) => (
-                    <li className='pt-4' key={index}><TextFont text={skillName} isUnderlined={true}/></li>
+                    <li className='pt-4' key={index}><TextLink text={skillName} isUnderlined={true}/></li>
                 ))}
             </ul>
             </section>

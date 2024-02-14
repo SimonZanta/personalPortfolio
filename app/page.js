@@ -7,6 +7,7 @@ import TextFont from './components/UI/universalText'
 import SkillBlock from './components/skillBlock'
 import ProjectTile from './components/projectBlock'
 import Image from 'next/image';
+import IconLink from './components/UI/Link/iconLink';
 
 
 const quoteFlood = [
@@ -57,8 +58,8 @@ export default async function Home() {
         <Section>
           <div className='flex min-h-1/2 flex-col-reverse xl:flex-row'>
             <div className='w-full xl:w-1/2 xl:h-screen flex flex-col md:flex-row xl:flex-col md:gap-24 gap-16 justify-center md:pt-0 pt-20 mb-32 xl:mb-0'>
-                <ProjectTile projectTitle="lul" projectTechnologies="xddddd"/>
-                <ProjectTile projectTitle="lul" projectTechnologies="xddddd"/>
+                <ProjectTile title="title" technologies="HTML | CSS"/>
+                <ProjectTile title="title" technologies="HTML | CSS"/>
             </div>
             <span className='xl:mt-auto xl:mb-auto md:mt-32 md:mb-32 lg:mb-40 lg:mt-28 mt-40'>
               <MainTitle text="projects"/>
@@ -71,27 +72,9 @@ export default async function Home() {
               <MainTitle text="contacts"/>
             </span>
             <div className='w-full xl:w-1/2 xl:h-[50vh] flex flex-row md:gap-16 gap-6 justify-center lg:justify-end items-center md:pt-0 pt-20 mb-32 xl:mb-0'>
-             <Image
-                src={"/personalPortfolio/icons/linkedInLogo.svg"}
-                width={imageSize}
-                height={imageSize}
-                alt={"gear"}
-                sizes="100vw"
-                className={"w-20 h-20 md:w-32 md:h-32 px-4"}/>
-                <Image
-                src={"/personalPortfolio/icons/githubIcon.svg"}
-                width={imageSize}
-                height={imageSize}
-                alt={"gear"}
-                sizes="100vw"
-                className={"w-20 h-20 md:w-32 md:h-32 px-4"}/>
-                <Image
-                src={"/personalPortfolio/icons/EmailIcon.svg"}
-                width={imageSize}
-                height={imageSize}
-                alt={"gear"}
-                sizes="100vw"
-                className={"w-20 h-20 md:w-32 md:h-32 px-4"}/>
+                <IconLink link={"https://www.linkedin.com/in/simonzanta/"} icon={"linkedInLogo.svg"} />
+                <IconLink link={"https://github.com/simonZanta"} icon={"githubIcon.svg"} />
+                <IconLink link={"mailto:simon.zanta@protonmail.com"}icon={"EmailIcon.svg"} />
             </div>            
           </div>
         </Section>
