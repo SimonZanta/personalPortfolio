@@ -43,7 +43,7 @@ export default function ContentBox({toLeft, textShort, textLong, imgName}){
                         <IconLoad className={"w-16 h-16 px-4 " + (isHovering ? "invisible" : "visible")}/>
                     </Suspense>
                     {/* //TODO remake this to use two textFont for textShort and textLong */}
-                    <span className='hidden lg:block'><TextFont text={isHovering ? textShort : textLong} isSmaller={isHovering ? false : true} isUppercase={true} /></span>
+                    <span className='hidden lg:block'><TextFont text={isHovering ? textShort : textLong} isSmaller={isHovering ? true : false} isUppercase={true} /></span>
                 </div>      
             </div>
         )

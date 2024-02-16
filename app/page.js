@@ -11,9 +11,9 @@ import IconLink from './components/UI/Link/iconLink';
 
 
 const quoteFlood = [
-  ["Passionate developer and dedicated student", "about me", "aboutMeSvg.js"],
-  ["From JavaScript enthusiast to java developer", "my projects", "projectSvg.js"],
-  ["want to get to me right away?", "contacts", "contactMeSvg.js"]
+  ["about me", "Passionate developer and dedicated student", "aboutMeSvg.js"],
+  ["my projects", "From JavaScript enthusiast to java developer", "projectSvg.js"],
+  ["contacts", "want to get to me right away?", "contactMeSvg.js"]
 ]
 
 export default async function Home() {

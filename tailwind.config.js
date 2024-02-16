@@ -19,10 +19,18 @@ module.exports = {
         underline:{
           '0%': {transform: 'translate(-100%)', opacity: '0'},
           '100': {transform: 'translate(0%)', opacity: '1'}
+        },
+        shake:{
+          '0%': {transform: 'rotate(-12deg) scale(1.05)'},
+          '25%': {transform: 'rotate(0deg) scale(1.05)'},
+          '50%': {transform: 'rotate(12deg) scale(1.05)'},
+          '75%': {transform: 'rotate(0deg) scale(1.05)'},
+          '100%': {transform: 'rotate(-12deg) scale(1.05)'},
         }
       },
       animation: {
         underline: 'underline 1s ease-in-out',
+        shake: 'shake 1s ease-in-out infinite',
       }
     },
     fontSize: {

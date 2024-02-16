@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import TextLink from './UI/Link/textLink'
 import IconLink from './UI/Link/iconLink'
 
@@ -11,7 +10,7 @@ const skillDict = {
 export default function SkillBlock(){
 
     return (
-    <div className="border-4 border-secondary w-max rounded-xl mb-auto h-min flex flex-col pl-4 pr-14 md:pl-10 md:pr-20 md:mt-auto mt-14">
+    <div className="border-4 border-secondary w-max rounded-xl mb-auto h-min flex flex-col pl-4 pr-14 md:pl-10 md:pr-20 md:mt-auto mt-14 ">
         <SkillItems/>
     </div>
     )
