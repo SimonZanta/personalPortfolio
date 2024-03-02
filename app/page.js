@@ -3,18 +3,20 @@ import ContentBox from './components/quickNavigation';
 import MainHeader from './components/welcomeBlock';
 import Section from './components/UI/section';
 import MainTitle from './components/UI/headerText';
+import {MainTitleLink} from './components/UI/headerText';
 import TextFont from './components/UI/universalText'
 import SkillBlock from './components/skillBlock'
 import ProjectTile from './components/projectBlock'
-import Image from 'next/image';
 import IconLink from './components/UI/Link/iconLink';
+import { skillDict } from './files/skillDictionary'
+import { templateDict } from './files/projectDictionary';
 
 
-const quoteFlood = [
-  ["about me", "Passionate developer and dedicated student", "aboutMeSvg.js"],
-  ["my projects", "From JavaScript enthusiast to java developer", "projectSvg.js"],
-  ["contacts", "want to get to me right away?", "contactMeSvg.js"]
-]
+const quoteFlood = {
+  'Šimon': ["about me", "Passionate developer and dedicated student", "aboutMeSvg.js"],
+  'projects': ["my projects", "From JavaScript enthusiast to java developer", "projectSvg.js"],
+  'contacts': ["contacts", "want to get to me right away?", "contactMeSvg.js"]
+}
 
 export default async function Home() {
   let imageSize = 0;
@@ -23,20 +25,21 @@ export default async function Home() {
         <MainHeader/>
         <Section smIsHidden={true}>
             <div className='absolute top-1/2 -translate-y-1/2 w-full'>
-              {quoteFlood.map((item, index) => {
+              {Object.entries(quoteFlood).map(([key, value], index) => {
                 let shouldBeLeft = index % 2 != 0
                 return(
                   <div className={(index != 0 ? 'mt-[-8px]' : '')}>
                     <ContentBox 
                     toLeft={shouldBeLeft} 
-                    textLong={item[0]} 
-                    textShort={item[1]} 
-                    imgName={item[2]}/>
+                    textLong={value[0]} 
+                    textShort={value[1]} 
+                    imgName={value[2]}
+                    linkID={key}/>
                   </div>
                 )})}                
             </div>
         </Section>
-        <Section>
+        <Section ID="Šimon">
           <div className={'flex min-h-screen flex-col md:flex-row '}>
             <div className='flex flex-col'>
               <span className='pt-20'>
@@ -51,22 +54,25 @@ export default async function Home() {
               </span>
             </div>
             <>
-              <SkillBlock/>
+              <SkillBlock skillDict={skillDict}/>
             </>
           </div>
         </Section>
-        <Section>
+        <Section ID="projects">
           <div className='flex min-h-1/2 flex-col-reverse xl:flex-row'>
             <div className='w-full xl:w-1/2 xl:h-screen flex flex-col md:flex-row xl:flex-col md:gap-24 gap-16 justify-center md:pt-0 pt-20 mb-32 xl:mb-0'>
-                <ProjectTile title="title" technologies="HTML | CSS"/>
-                <ProjectTile title="title" technologies="HTML | CSS"/>
+                {templateDict.map((value) => (
+                  
+                    <div className='sm:w-2/3'><ProjectTile title={value.title} technologies={value.displayTechnologies}/></div>
+                  
+                ))}
             </div>
             <span className='xl:mt-auto xl:mb-auto md:mt-32 md:mb-32 lg:mb-40 lg:mt-28 mt-40'>
-              <MainTitle text="projects"/>
+              <MainTitleLink text="projects"/>
             </span>
           </div>
         </Section>
-        <Section>
+        <Section ID="contacts">
           <div className='flex flex-col 2xl:flex-row'>
             <span className='xl:mt-auto xl:mb-auto md:mt-32 md:mb-32 lg:mb-40 lg:mt-28 mt-40'>
               <MainTitle text="contacts"/>
