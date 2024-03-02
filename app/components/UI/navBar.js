@@ -1,3 +1,8 @@
+//component description
+//depricated, scroll in navbar, used to navigate through single page, using ID
+
+//options
+//linkArr - array, stores all ID of headers
 export default function NavBar({linkArr}){
     if(linkArr){
         return(

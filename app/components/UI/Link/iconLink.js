@@ -1,7 +1,14 @@
 import Image from 'next/image';
 
+//component description:
+//used to display Icon with link attached to it
+
+//options: 
+//isSmall - boolean, true sets font size to small
+//link - string, points to some URL
+//icon - string, name of icon in "/personalPortfolio/icons/" folder
+
 export default function IconLink({link="/personalPortfolio", icon, isSmall=false}){
-    //TODO create animation for hover
     return(
         <a href={link} target="_blank" className={'pr-4' + (isSmall ? "" : "pl-4")}>
             <Image

@@ -2,6 +2,9 @@ import NavBar from './UI/navBar';
 import MainTitle from './UI/headerText';
 import Image from 'next/image'
 
+//component description
+//welcome section on main page
+
 export default function MainHeader(){
 
     return (

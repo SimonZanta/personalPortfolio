@@ -3,8 +3,16 @@ import {useState, Suspense, useEffect} from 'react';
 import TextFont from './UI/universalText.js';
 import { lazy } from 'react';
 
+//component description
+//stylish navigation for main page, not relly any other use
 
 export default function ContentBox({toLeft, textShort, textLong, imgName}){
+//options
+//toLeft - boolean, if true component will have content on the left
+//textShort - string, main text displayed as name of navigation]
+//textLong - string, more detailed description of the title
+//imgName - string, name of icon component stored in "./icons/"
+//linkID - string, id name of element this navigation links to
 
 
         // this dynamically imports icons as a components
@@ -14,6 +22,7 @@ export default function ContentBox({toLeft, textShort, textLong, imgName}){
         const [IconLoad, iconIsLoading] = useState(lazy(() => import('./icons/aboutMeSvg.js')))
 
         //this will update IconLoad for the first time to its correct component
+        //this will update IconLoad for the first time so its correct component
         useEffect(() => {
             let myComponentPath = "./icons/" + imgName;
             iconIsLoading(lazy(() => import(`${myComponentPath}`)));

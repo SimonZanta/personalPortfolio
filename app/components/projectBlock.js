@@ -4,6 +4,14 @@ import TextFont from "./UI/universalText";
 import Image from 'next/image'
 
 export default function ProjectTile({title, technologies, img="Rectangle.png"}){
+//component description
+//small tile that displays project
+
+//options
+//title - string, name of the project
+//technologies - array, technologies used for this project - 1 or 2 optimally
+//img - string, img name in "/personalPortfolio/projectBackground/" used as a project background
+//link - URL, url leading to project github page
 
     const [isHovering, setIsHovering] = useState(false);
 

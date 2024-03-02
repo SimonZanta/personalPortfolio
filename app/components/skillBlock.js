@@ -6,6 +6,12 @@ const skillDict = {
     'Frontend': ["React", "Angular", "JS"],
     'Design': ["Figma"]
 }
+//component description
+//displays all skills, their category names
+//TODO feat link to project page and filter by selected skill or category
+
+//options
+//skillDict - dictionary, key - skill category, value - skill name
 
 export default function SkillBlock(){
 
