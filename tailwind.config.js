@@ -13,7 +13,7 @@ module.exports = {
         'mainBackgroundDark': '#111111',
         'secondary': '#8616B7',
         'tertiary': '#F3CBF3',
-        'link': '#EE9CF3',
+        'link': '#F7D3EE',
       },
       keyframes:{
         underline:{
