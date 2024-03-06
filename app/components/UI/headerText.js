@@ -28,7 +28,7 @@ export default function MainTitle({text, noUnderline, hasHoverEffect}) {
 
 export function MainTitleLink({text}){
     return(
-            <a href="./personalPortfolio/projects">
+            <a href="./projects">
                 <MainTitle text={text} hasHoverEffect={true}/>
             </a>
     )
